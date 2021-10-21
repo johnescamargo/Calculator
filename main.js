@@ -78,20 +78,14 @@ funcEqual = (num, numPerc) => {
     //some code here 
 }
 
-let arrayNum = [0];
 let result = 0;
 //Display result of calculations
 funcPlus = () => {
-     arrayNum.push(parseInt(document.getElementById("result").innerHTML));
-     acFunc();
-     console.log(arrayNum);
-     
-     for (let i = 0; i < arrayNum.length; i++) {
-        result = arrayNum[i-1] + arrayNum[i];
-     }
-
+     let num = parseInt(document.getElementById("result").innerHTML);
+     result = num + result;
      document.getElementById("result").innerHTML = result;
      console.log(result);
+     acFunc();
 }
 
 //Display result of calculations
