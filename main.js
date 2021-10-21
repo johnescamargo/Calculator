@@ -86,6 +86,9 @@ funcPlus = () => {
      document.getElementById("result").innerHTML = result;
      console.log(result);
      acFunc();
+     
+     //if textare is not empty, erase and type new number
+     
 }
 
 //Display result of calculations
