@@ -1,6 +1,42 @@
+let result = 0;
+let adition = 0;
+let division =0;
+let subtraction =0;
+let multiplication =0;
+let percentage =0;
+
 //Display result of calculations
-displayRes = (resultCal) => {
-    document.getElementById("result").innerHTML = resultCal; 
+displayRes = () => {
+    
+    if (adition > 0){
+      let num = parseInt(document.getElementById("result").innerHTML);
+      result = num + result;  
+    }
+    
+    if (subtraction > 0) {
+      let num = parseInt(document.getElementById("result").innerHTML);
+      result = result - num;
+    }
+    
+    if (division > 0) {
+      let num = parseInt(document.getElementById("result").innerHTML);
+      result = result / num;
+    }
+    
+    if (multiplication > 0) {
+      let num = parseInt(document.getElementById("result").innerHTML);
+      result = result * num;
+    }
+
+    
+    document.getElementById("result").innerHTML = result;
+    console.log(result);
+    
+    result = 0;
+    adition = 0;
+    subtraction = 0;
+    division = 0;
+    multiplication = 0;
 }
 
 //Clean textarea tag
@@ -74,29 +110,60 @@ funcComma = (num, numPerc) => {
 }
 
 //Display result of calculations
-funcEqual = (num, numPerc) => {
-    //some code here 
+funcMultiplication = () => {
+    let num = parseInt(document.getElementById("result").innerHTML);
+    if (multiplication > 0) {
+      result = result * num;
+    } else {
+      result = num;
+    }
+    
+    console.log(result);
+    acFunc();
+    adition = 0;
+    division = 0;
+    multiplication = multiplication + 1;
+    subtraction = 0;
 }
 
-let result = 0;
+
 //Display result of calculations
 funcPlus = () => {
      let num = parseInt(document.getElementById("result").innerHTML);
-     result = num + result;
-     document.getElementById("result").innerHTML = result;
+     result = result + num;
      console.log(result);
      acFunc();
-     
-     //if textare is not empty, erase and type new number
-     
+     adition = adition + 1;
+     division = 0;
+     multiplication = 0;
+     subtraction = 0;
 }
 
 //Display result of calculations
-funcMinus = (num, numPerc) => {
-    //some code here 
+funcMinus = () => {
+    let num = parseInt(document.getElementById("result").innerHTML);
+    result = num - result;
+    console.log(result);
+    acFunc();
+    adition = 0;
+    division = 0;
+    multiplication = 0;
+    subtraction = subtraction + 1;
 }
 
 //Display result of calculations
-funcDivision = (num, numPerc) => {
-    //some code here 
+funcDivision = () => {
+    let num = parseInt(document.getElementById("result").innerHTML);
+    if (division > 0){
+      result = result / num;  
+    } else {
+      result = num;
+    }
+    
+    console.log(result);
+    acFunc();
+    adition = 0;
+    division = division + 1;
+    multiplication = 0;
+    subtraction = 0;
 }
