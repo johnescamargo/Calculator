@@ -1,2 +1,2 @@
-# Development of a web calcultor
+# Development of a web calculator
 # Only using JavaScript, HTML5, and CSS.
