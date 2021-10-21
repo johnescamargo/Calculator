@@ -8,19 +8,20 @@ acFunc = () => {
     document.getElementById("result").innerHTML = "";
 }
 
-//Clean textarea tag
+//Change the value of a number, negative or positive
 plusMinusFunc = () => {
-    let num = document.getElementById("result");
+    let num = document.getElementById("result").innerHTML;
+    document.getElementById("result").innerHTML = num * -1;
 }
 
-//Display result of calculations
+//calculate the result acording to percentage
 percentageFunc = (num, numPerc) => {
     //some code here 
 }
 
 //Display number 0
-func0 = (num, numPerc) => {
-    //some code here 
+func0 = () => {
+    document.getElementById("result").innerHTML += 0; 
 }
 
 //Display number 1
@@ -28,43 +29,43 @@ func1 = () => {
     document.getElementById("result").innerHTML += 1;
 }
 //Display  number 2
-func2 = (num, numPerc) => {
-    //some code here 
+func2 = () => {''
+    document.getElementById("result").innerHTML += 2; 
 }
 
 //Display  number 3
-func3 = (num, numPerc) => {
-    //some code here 
+func3 = () => {
+    document.getElementById("result").innerHTML += 3; 
 }
 
 //Display result of calculations
-func4 = (num, numPerc) => {
-    //some code here 
+func4 = () => {
+    document.getElementById("result").innerHTML += 4; 
 }
 
 //Display result of calculations
-func5 = (num, numPerc) => {
-    //some code here 
+func5 = () => {
+    document.getElementById("result").innerHTML += 5; 
 }
 
 //Display result of calculations
-func6 = (num, numPerc) => {
-    //some code here 
+func6 = () => {
+    document.getElementById("result").innerHTML += 6; 
 }
 
 //Display result of calculations
-func7 = (num, numPerc) => {
-    //some code here 
+func7 = () => {
+    document.getElementById("result").innerHTML += 7; 
 }
 
 //Display result of calculations
-func8 = (num, numPerc) => {
-    //some code here 
+func8 = () => {
+    document.getElementById("result").innerHTML += 8; 
 }
 
 //Display result of calculations
-func9 = (num, numPerc) => {
-    //some code here 
+func9 = () => {
+    document.getElementById("result").innerHTML += 9; 
 }
 
 //Display result of calculations
@@ -77,9 +78,20 @@ funcEqual = (num, numPerc) => {
     //some code here 
 }
 
+let arrayNum = [0];
+let result = 0;
 //Display result of calculations
-funcPlus = (num, numPerc) => {
-    //some code here 
+funcPlus = () => {
+     arrayNum.push(parseInt(document.getElementById("result").innerHTML));
+     acFunc();
+     console.log(arrayNum);
+     
+     for (let i = 0; i < arrayNum.length; i++) {
+        result = arrayNum[i-1] + arrayNum[i];
+     }
+
+     document.getElementById("result").innerHTML = result;
+     console.log(result);
 }
 
 //Display result of calculations
