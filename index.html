@@ -9,31 +9,51 @@
 </head>
 
 <body>
-    <div>
-        <h2>Calculator</h2>
-    </div>
     
-    <div>
-        <textarea id="result"></textarea>
+    
+    <div id="mainDiv">
+      <div>
+        <h2>Calculator</h2>
+      </div>
+      
+      <div class="divResult">
+        <text id="result"></text>
+      </div>
+      
+        <div class="divButtons">
         <button id="btn-ac" onclick="acFunc()">AC</button>
         <button id="btn-plus_minus" onclick="plusMinusFunc()">+/-</button>
         <button id="btn-percentage" onclick="percentageFunc()">%</button>
-        <button id="btn-division" onclick="funcDivision()">/</button>
+        <button id="btn-division" onclick="funcDivision()">÷</button>  
+        </div>
+        
+        <div class="divButtons">
         <button id="btn-7" onclick="func7()">7</button>
         <button id="btn-8" onclick="func8()">8</button>
         <button id="btn-9" onclick="func9()">9</button>
-        <button id="btn-multip" onclick="funcMultiplication()">X</button>
+        <button id="btn-multip" onclick="funcMultiplication()">x</button>  
+        </div>
+        
+        <div class="divButtons">
         <button id="btn-4" onclick="func4()">4</button>
         <button id="btn-5" onclick="func5()">5</button>
         <button id="btn-6" onclick="func6()">6</button>
-        <button id="btn-minus" onclick="funcMinus()">-</button>
+        <button id="btn-minus" onclick="funcMinus()">-</button>  
+        </div>
+        
+        <div class="divButtons">
         <button id="btn-1" onclick="func1()">1</button>
         <button id="btn-2" onclick="func2()">2</button>
         <button id="btn-3" onclick="func3()">3</button>
-        <button id="btn-plus" onclick="funcPlus()">+</button>
+        <button id="btn-plus" onclick="funcPlus()">+</button>  
+        </div>
+        
+        <div class="divButtons">
         <button id="btn-0" onclick="func0()">0</button>
         <button id="btn-comma" onclick="funcComma()">,</button>
-        <button id="btn-equal" onclick="displayRes()">=</button>
+        <button id="btn-equal" onclick="displayRes()">=</button>  
+        </div>
+        
     </div>
 
     <script src="main.js"></script>
