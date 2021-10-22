@@ -1,9 +1,9 @@
 let result = 0;
 let adition = 0;
-let division =0;
-let subtraction =0;
-let multiplication =0;
-let percentage =0;
+let division = 0;
+let subtraction = 0;
+let multiplication = 0;
+let percentage = 0;
 
 //Display result of calculations
 displayRes = () => {
@@ -37,6 +37,7 @@ displayRes = () => {
     subtraction = 0;
     division = 0;
     multiplication = 0;
+    comma = 0;
 }
 
 //Clean textarea tag
@@ -105,8 +106,16 @@ func9 = () => {
 }
 
 //Display result of calculations
-funcComma = (num, numPerc) => {
-    //some code here 
+let comma = 0;
+
+funcComma = () => {
+    let num = parseInt(document.getElementById("result").innerHTML);
+    console.log(num);
+    if (num == null || num ===0 || comma > 0){
+    } else {
+    document.getElementById("result").innerHTML += ",";
+    comma++;
+    }
 }
 
 //Display result of calculations
