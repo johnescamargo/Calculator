@@ -160,7 +160,7 @@ funcMinus = () => {
     subtraction = subtraction + 1;
 }
 
-//Display result of calculations
+//Calculation Division
 funcDivision = () => {
     let num = parseInt(document.getElementById("result").innerHTML);
     if (division > 0){
