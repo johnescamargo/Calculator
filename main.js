@@ -140,7 +140,6 @@ displayRes = () => {
 
     document.getElementById("result").innerHTML = result;
     document.getElementById("resultDisplay").innerHTML = resultDisplay;
-    console.log(result);
 
     //Erasing all attributes
     result = 0;
@@ -173,7 +172,6 @@ funcTimes = () => {
         result = num;
     }
 
-    console.log(result);
     acFunc();
     adition = false;
     division = false;
@@ -188,7 +186,6 @@ funcTimes = () => {
 funcPlus = () => {
     let num = parseFloat(document.getElementById("result").innerHTML);
     result = result + num;
-    console.log(result);
     acFunc();
     adition = true;
     division = false;
@@ -202,7 +199,6 @@ funcPlus = () => {
 funcMinus = () => {
     let num = parseFloat(document.getElementById("result").innerHTML);
     result = num - result;
-    console.log(result);
     acFunc();
     adition = false;
     division = false;
@@ -221,7 +217,6 @@ funcDivision = () => {
         result = num;
     }
 
-    console.log(result);
     acFunc();
     adition = false;
     division = true;
