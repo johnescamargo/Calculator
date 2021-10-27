@@ -1,48 +1,20 @@
+//Global attributes
 let result = 0;
-let adition = 0;
-let division = 0;
-let subtraction = 0;
-let multiplication = 0;
-let percentage = 0;
+let resPercent = 0;
+let percent = 0;
+let resultDisplay = "";
 
-//Display result of calculations
-displayRes = () => {
-    
-    if (adition > 0){
-      let num = parseInt(document.getElementById("result").innerHTML);
-      result = num + result;  
-    }
-    
-    if (subtraction > 0) {
-      let num = parseInt(document.getElementById("result").innerHTML);
-      result = result - num;
-    }
-    
-    if (division > 0) {
-      let num = parseInt(document.getElementById("result").innerHTML);
-      result = result / num;
-    }
-    
-    if (multiplication > 0) {
-      let num = parseInt(document.getElementById("result").innerHTML);
-      result = result * num;
-    }
+let adition = false;
+let division = false;
+let subtraction = false;
+let multiplication = false;
+let percentage = false;
 
-    
-    document.getElementById("result").innerHTML = result;
-    console.log(result);
-    
-    result = 0;
-    adition = 0;
-    subtraction = 0;
-    division = 0;
-    multiplication = 0;
-    comma = 0;
-}
-
-//Clean textarea tag
+//Cleaning up text tag
 acFunc = () => {
     document.getElementById("result").innerHTML = "";
+    document.getElementById("resultDisplay").innerHTML = "";
+    resultDisplay = "";
 }
 
 //Change the value of a number, negative or positive
@@ -51,128 +23,210 @@ plusMinusFunc = () => {
     document.getElementById("result").innerHTML = num * -1;
 }
 
-//calculate the result acording to percentage
-percentageFunc = (num, numPerc) => {
-    //some code here 
+//Calculating the percentage acoording to first number typed
+percentageFunc = () => {
+    percent = document.getElementById("result").innerHTML;
+    resPercent = (result * percent) / 100;
+    percentage = true;
 }
 
-//Display number 0
+//Displaying number 0
 func0 = () => {
-    document.getElementById("result").innerHTML += 0; 
+    document.getElementById("result").innerHTML += 0;
 }
 
-//Display number 1
+//Displaying number 1
 func1 = () => {
     document.getElementById("result").innerHTML += 1;
 }
-//Display  number 2
-func2 = () => {''
-    document.getElementById("result").innerHTML += 2; 
+//Displaying  number 2
+func2 = () => {
+    document.getElementById("result").innerHTML += 2;
 }
 
-//Display  number 3
+//Displaying  number 3
 func3 = () => {
-    document.getElementById("result").innerHTML += 3; 
+    document.getElementById("result").innerHTML += 3;
 }
 
-//Display result of calculations
+//Displaying  number 4
 func4 = () => {
-    document.getElementById("result").innerHTML += 4; 
+    document.getElementById("result").innerHTML += 4;
 }
 
-//Display result of calculations
+//Displaying  number 5
 func5 = () => {
-    document.getElementById("result").innerHTML += 5; 
+    document.getElementById("result").innerHTML += 5;
 }
 
-//Display result of calculations
+//Displaying  number 6
 func6 = () => {
-    document.getElementById("result").innerHTML += 6; 
+    document.getElementById("result").innerHTML += 6;
 }
 
-//Display result of calculations
+//Displaying  number 7
 func7 = () => {
-    document.getElementById("result").innerHTML += 7; 
+    document.getElementById("result").innerHTML += 7;
 }
 
-//Display result of calculations
+//Displaying  number 8
 func8 = () => {
-    document.getElementById("result").innerHTML += 8; 
+    document.getElementById("result").innerHTML += 8;
 }
 
-//Display result of calculations
+//Displaying  number 9
 func9 = () => {
-    document.getElementById("result").innerHTML += 9; 
+    document.getElementById("result").innerHTML += 9;
 }
 
-//Display result of calculations
-let comma = 0;
 
+
+//Displaying result of calculations
+displayRes = () => {
+
+    if (percentage == false) {
+
+        if (adition == true) {
+            let num = parseFloat(document.getElementById("result").innerHTML);
+            result = num + result;
+            resultDisplay = resultDisplay + num + " = " + result;
+        }
+
+        if (subtraction == true) {
+            let num = parseFloat(document.getElementById("result").innerHTML);
+            result = result - num;
+            resultDisplay = resultDisplay + num + " = " + result;
+        }
+
+        if (division == true) {
+            let num = parseFloat(document.getElementById("result").innerHTML);
+            result = result / num;
+            resultDisplay = resultDisplay + num + " = " + result;
+        }
+
+        if (multiplication == true) {
+            let num = parseFloat(document.getElementById("result").innerHTML);
+            result = result * num;
+            resultDisplay = resultDisplay + num + " = " + result;
+        }
+
+    } else {
+
+        if (adition == true) {
+            result = result + resPercent;
+            resultDisplay = resultDisplay + percent + "% " + 
+            "(" + resPercent + ")" + " = " + result;
+        }
+
+        if (subtraction == true) {
+            result = result - resPercent;
+            resultDisplay = resultDisplay + percent + "% " +
+             "(" + resPercent + ")" + " = " + result;
+        }
+
+        if (division == true) {
+            result = result / resPercent;
+            resultDisplay = resultDisplay + percent + "% " +
+             "(" + resPercent + ")" + " = " + result;
+        }
+
+        if (multiplication == true) {
+            result = result * resPercent;
+            resultDisplay = resultDisplay + percent + "% " +
+             "(" + resPercent + ")" + " = " + result;
+        }
+    }
+
+
+    document.getElementById("result").innerHTML = result;
+    document.getElementById("resultDisplay").innerHTML = resultDisplay;
+    console.log(result);
+
+    //Erasing all attributes
+    result = 0;
+    percent = 0;
+
+    adition = false;
+    subtraction = false;
+    division = false;
+    multiplication = false;
+    percentage = false;
+}
+
+//Adding DOT to a number
 funcComma = () => {
-    let num = parseInt(document.getElementById("result").innerHTML);
-    console.log(num);
-    if (num == null || num ===0 || comma > 0){
+    let num = document.getElementById("result").innerHTML;
+    if (num.includes(".")) {
     } else {
-    document.getElementById("result").innerHTML += ",";
-    comma++;
+        document.getElementById("result").innerHTML += ".";
     }
+
 }
 
-//Display result of calculations
-funcMultiplication = () => {
-    let num = parseInt(document.getElementById("result").innerHTML);
+//Calcutation Times
+funcTimes = () => {
+    let num = parseFloat(document.getElementById("result").innerHTML);
+
     if (multiplication > 0) {
-      result = result * num;
+        result = result * num;
     } else {
-      result = num;
+        result = num;
     }
-    
+
     console.log(result);
     acFunc();
-    adition = 0;
-    division = 0;
-    multiplication = multiplication + 1;
-    subtraction = 0;
+    adition = false;
+    division = false;
+    multiplication = true;
+    subtraction = false;
+
+    resultDisplay = document.getElementById("resultDisplay").innerHTML = num + " x ";
 }
 
 
-//Display result of calculations
+//Calculation Plus
 funcPlus = () => {
-     let num = parseInt(document.getElementById("result").innerHTML);
-     result = result + num;
-     console.log(result);
-     acFunc();
-     adition = adition + 1;
-     division = 0;
-     multiplication = 0;
-     subtraction = 0;
+    let num = parseFloat(document.getElementById("result").innerHTML);
+    result = result + num;
+    console.log(result);
+    acFunc();
+    adition = true;
+    division = false;
+    multiplication = false;
+    subtraction = false;
+
+    resultDisplay = document.getElementById("resultDisplay").innerHTML = num + " + ";
 }
 
-//Display result of calculations
+//Calculation Minus
 funcMinus = () => {
-    let num = parseInt(document.getElementById("result").innerHTML);
+    let num = parseFloat(document.getElementById("result").innerHTML);
     result = num - result;
     console.log(result);
     acFunc();
-    adition = 0;
-    division = 0;
-    multiplication = 0;
-    subtraction = subtraction + 1;
+    adition = false;
+    division = false;
+    multiplication = false;
+    subtraction = true;
+
+    resultDisplay = document.getElementById("resultDisplay").innerHTML = num + " - ";
 }
 
 //Calculation Division
 funcDivision = () => {
-    let num = parseInt(document.getElementById("result").innerHTML);
-    if (division > 0){
-      result = result / num;  
+    let num = parseFloat(document.getElementById("result").innerHTML);
+    if (division > 0) {
+        result = result / num;
     } else {
-      result = num;
+        result = num;
     }
-    
+
     console.log(result);
     acFunc();
-    adition = 0;
-    division = division + 1;
-    multiplication = 0;
-    subtraction = 0;
+    adition = false;
+    division = true;
+    multiplication = false;
+    subtraction = false;
+
+    resultDisplay = document.getElementById("resultDisplay").innerHTML = num + " ÷ ";
 }
