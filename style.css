@@ -1,23 +1,19 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  /* font-size: 24px; */
   display: flex;
   justify-content: center;
 }
 
-#result {
-  font-size: 2.5vw;
-  font-family: Arial, Helvetica, sans-serif;
-  direction: rtl;
-}
-
 button {
   width: 60px;
+  height: 60px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
-  height: 60px;
   margin: 3px;
   border-radius: 50% 50%;
+  color: white;
+  background-color: rgb(28, 38, 68);
+  border-color: transparent;
 }
 
 #btn-0 {
@@ -25,19 +21,45 @@ button {
   border-radius: 60px 60px ;
 }
 
+#btn-equal, #btn-plus, #btn-minus, #btn-times, #btn-division {
+  background-color: rgb(100, 63, 99);
+}
+
+#btn-ac, #btn-plus_minus, #btn-percent {
+  background-color: rgb(153, 65, 124);
+}
+
+
 .divButtons {
   display: flex;
   justify-content: center;
-  background-color: rgb(173, 180, 187);
+  background-color: rgb(6, 6, 32);
   width: 280px;
-  font-size: 2.5vw;
+  font-size: 24px;
 }
 
 .divResult {
   display: grid;
   justify-content: right;
   height: 73px;
-  background-color: rgb(234, 188, 255);
-  font-size: 2.5vw;
+  background-color: rgb(6, 6, 32);
   max-width: 280px;
+  justify-items: flex-end;
+}
+
+#result {
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#resultDisplay {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#mainDiv {
+  background-color: rgb(6, 6, 32);
+  color: white;
+  padding: 7px;
+  padding-bottom: 15px;
 }

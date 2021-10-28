@@ -9,6 +9,21 @@ let division = false;
 let subtraction = false;
 let multiplication = false;
 let percentage = false;
+let resLength = true;
+
+//Cheaking if the length of 'result' is smaller than 9 (from 0 to 8)
+checkLength = () => {
+    let res = document.getElementById("result").innerHTML;
+    res = res.replace(".", "");
+    console.log(res);
+    let length = res.toString().length;
+
+    if (length <= 8) {
+        resLength = true;
+    } else {
+        resLength = false;
+    }
+}
 
 //Cleaning up text tag
 acFunc = () => {
@@ -32,51 +47,81 @@ percentageFunc = () => {
 
 //Displaying number 0
 func0 = () => {
+    checkLength();
+    if (resLength == true) {
     document.getElementById("result").innerHTML += 0;
+    }
 }
 
 //Displaying number 1
 func1 = () => {
-    document.getElementById("result").innerHTML += 1;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 1;
+    }
 }
 //Displaying  number 2
 func2 = () => {
-    document.getElementById("result").innerHTML += 2;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 2;
+    }
 }
 
 //Displaying  number 3
 func3 = () => {
-    document.getElementById("result").innerHTML += 3;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 3;
+    }
 }
 
 //Displaying  number 4
 func4 = () => {
-    document.getElementById("result").innerHTML += 4;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 4;
+    }
 }
 
 //Displaying  number 5
 func5 = () => {
-    document.getElementById("result").innerHTML += 5;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 5;
+    }
 }
 
 //Displaying  number 6
 func6 = () => {
-    document.getElementById("result").innerHTML += 6;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 6;
+    }
 }
 
 //Displaying  number 7
 func7 = () => {
-    document.getElementById("result").innerHTML += 7;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 7;
+    }
 }
 
 //Displaying  number 8
 func8 = () => {
-    document.getElementById("result").innerHTML += 8;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 8;
+    }
 }
 
 //Displaying  number 9
 func9 = () => {
-    document.getElementById("result").innerHTML += 9;
+    checkLength();
+    if (resLength == true) {
+        document.getElementById("result").innerHTML += 9;
+    }
 }
 
 
@@ -114,26 +159,26 @@ displayRes = () => {
 
         if (adition == true) {
             result = result + resPercent;
-            resultDisplay = resultDisplay + percent + "% " + 
-            "(" + resPercent + ")" + " = " + result;
+            resultDisplay = resultDisplay + percent + "% " +
+                "(" + resPercent + ")" + " = " + result;
         }
 
         if (subtraction == true) {
             result = result - resPercent;
             resultDisplay = resultDisplay + percent + "% " +
-             "(" + resPercent + ")" + " = " + result;
+                "(" + resPercent + ")" + " = " + result;
         }
 
         if (division == true) {
             result = result / resPercent;
             resultDisplay = resultDisplay + percent + "% " +
-             "(" + resPercent + ")" + " = " + result;
+                "(" + resPercent + ")" + " = " + result;
         }
 
         if (multiplication == true) {
             result = result * resPercent;
             resultDisplay = resultDisplay + percent + "% " +
-             "(" + resPercent + ")" + " = " + result;
+                "(" + resPercent + ")" + " = " + result;
         }
     }
 
