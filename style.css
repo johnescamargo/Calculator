@@ -18,17 +18,22 @@ button {
 
 #btn-0 {
   width: 125px;
-  border-radius: 60px 60px ;
+  border-radius: 60px 60px;
 }
 
-#btn-equal, #btn-plus, #btn-minus, #btn-times, #btn-division {
+#btn-equal,
+#btn-plus,
+#btn-minus,
+#btn-times,
+#btn-division {
   background-color: rgb(100, 63, 99);
 }
 
-#btn-ac, #btn-plus_minus, #btn-percent {
+#btn-ac,
+#btn-plus_minus,
+#btn-percent {
   background-color: rgb(153, 65, 124);
 }
-
 
 .divButtons {
   display: flex;
