@@ -302,67 +302,67 @@ window.addEventListener(
     }
 
     switch (event.key) {
-      case "0": 
+      case "0":
         func0();// Calling method to get number
         break;
-        
-      case "1": 
+
+      case "1":
         func1();// Calling method to get number
         break;
-        
-      case "2": 
+
+      case "2":
         func2();// Calling method to get number
         break;
-        
-      case "3": 
+
+      case "3":
         func3();// Calling method to get number
         break;
-        
+
       case "4": 1
         func4();// Calling method to get number
         break;
-        
-      case "5": 
+
+      case "5":
         func5();// Calling method to get number
         break;
-        
-      case "6": 
+
+      case "6":
         func6();// Calling method to get number
         break;
-        
-      case "7": 
+
+      case "7":
         func7();// Calling method to get number
         break;
-        
-      case "8": 
+
+      case "8":
         func8();// Calling method to get number
         break;
-        
-      case "9": 
+
+      case "9":
         func9();// Calling method to get number
         break;
 
-        case ",": 
-       funcComma();// Calling method to get number
+      case ",":
+        funcComma();// Calling method to get number
         break;
-        
-        case "/": 
+
+      case "/":
         funcDivision();// Calling method to get number
         break;
 
-        case "*": 
+      case "*":
         funcTimes();// Calling method to get number
         break;
 
-        case "-": 
+      case "-":
         funcMinus();// Calling method to get number
         break;
 
-        case "+": 
+      case "+":
         funcPlus();// Calling method to get number
         break;
 
-        case "Enter": 
+      case "Enter":
         displayRes();// Calling method to get number
         break;
 
